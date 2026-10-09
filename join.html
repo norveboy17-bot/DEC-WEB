@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Del English Club</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#fbfaf6;--ink:#1b2a4a;--muted:#55607a;--card:#fff;--line:#dfe3ec;--yellow:#ffd23f;--coral:#ff6b5b;--sky:#cfe6fb;--on-yellow:#1b2a4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10172a;--ink:#f3f1ea;--muted:#a6b0c8;--card:#18213a;--line:#2a3555;--sky:#26406b}}
+:root[data-theme="dark"]{--bg:#10172a;--ink:#f3f1ea;--muted:#a6b0c8;--card:#18213a;--line:#2a3555;--sky:#26406b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+.logo{font:800 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500}
+nav ul a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:48px 0 72px}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);font-weight:800;letter-spacing:-.025em}
+.hero p{max-width:46ch;color:var(--muted);font-size:1.15rem;margin:20px 0 28px}
+.btn{display:inline-block;background:var(--yellow);color:var(--on-yellow);font-weight:600;padding:14px 26px;border-radius:999px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;font-family:inherit;font-size:1rem}
+.btn.alt{background:transparent;color:var(--ink);margin-left:8px}
+.chat{display:flex;flex-direction:column;gap:12px}
+.b{max-width:82%;padding:12px 18px;border-radius:22px;font-weight:500;opacity:0;animation:pop .45s ease forwards}
+.b.l{background:var(--sky);border-bottom-left-radius:6px;align-self:flex-start}
+.b.r{background:var(--yellow);color:var(--on-yellow);border-bottom-right-radius:6px;align-self:flex-end}
+.b.c{background:var(--coral);color:#fff;border-bottom-left-radius:6px;align-self:flex-start}
+.b:nth-child(1){animation-delay:.2s}.b:nth-child(2){animation-delay:.9s}.b:nth-child(3){animation-delay:1.6s}.b:nth-child(4){animation-delay:2.3s}.b:nth-child(5){animation-delay:3s}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.b{animation:none;opacity:1}html{scroll-behavior:auto}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700;margin-bottom:14px;letter-spacing:-.015em}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.card:nth-child(1){border-radius:28px 8px 28px 8px}.card:nth-child(2){border-radius:8px 28px 8px 28px}.card:nth-child(3){border-radius:28px 8px 28px 8px}.card:nth-child(4){border-radius:8px 28px 8px 28px}
+.sched{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden}
+.sched th,.sched td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line)}
+.sched th{background:var(--sky);color:var(--ink)}
+.tablewrap{overflow-x:auto}
+details{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:4px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;padding:14px 0;font-size:1.05rem}
+details[open]{border-color:var(--ink)}
+details p,details ul{color:var(--muted);margin:0 0 16px}
+details ul{padding-left:20px}
+.join-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.join-note{background:var(--ink);color:var(--bg);border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:100%}
+.join-note p{color:var(--bg);opacity:.85}
+.join-note h3{font-size:1.7rem;margin-bottom:12px}
+.join-points{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.join-points li{display:flex;gap:10px;align-items:flex-start}
+.join-points li span{color:var(--yellow);font-weight:800}
+.join-form-card{background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:28px}
+form{display:grid;gap:16px;max-width:none}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-weight:600;display:grid;gap:6px}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{resize:vertical;min-height:110px}
+.field-hint{font-size:.88rem;color:var(--muted);font-weight:400}
+#ok{display:none;font-weight:600;color:var(--ink);background:var(--sky);padding:14px 16px;border-radius:12px;margin:0}
+.join-disclaimer{font-size:.88rem;color:var(--muted);margin:0}
+@media (max-width:760px){.join-layout{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.join-note,.join-form-card{padding:22px}}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}.btn.alt{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<a class="logo" href="#top">Del English Club</a>
+<ul><li><a href="#about">About</a></li><li><a href="#activities">Activities</a></li><li><a href="#schedule">Schedule</a></li><li><a href="#docs">Docs</a></li><li><a href="#join">Join</a></li></ul>
+</nav>
+
+<header class="hero" id="top">
+<div>
+<h1>Say it in English. Out loud.</h1>
+<p>Del English Club is a friendly space to practice speaking, make friends, and get confident, whatever your level.</p>
+<a class="btn" href="#join">Join the club</a><a class="btn alt" href="#about">What we do</a>
+</div>
+<div class="chat" aria-label="Example conversation">
+<div class="b l">Hi! Is this the English club?</div>
+<div class="b r">It is! Come in, grab a seat.</div>
+<div class="b l">My English isn't very good yet…</div>
+<div class="b c">Nobody's is perfect. That's why we practice.</div>
+<div class="b r">See you on Friday?</div>
+</div>
+</header>
+
+<section id="about">
+<h2>About the club</h2>
+<p class="lead">We're a student-run club that meets every week to speak English together in a relaxed, no-pressure setting. No tests, no grades. Just conversation, games, and learning from each other.</p>
+<div class="grid">
+<div class="card"><h3>Who can join</h3><p>Anyone who wants to improve. Beginners to advanced speakers are welcome.</p></div>
+<div class="card"><h3>Our goal</h3><p>Help every member speak with more confidence in daily life, school, and work.</p></div>
+<div class="card"><h3>Our style</h3><p>Mistakes are normal here. We correct kindly and celebrate progress.</p></div>
+</div>
+</section>
+
+<section id="activities">
+<h2>What we do</h2>
+<p class="lead">Every session mixes a few of these, so no two weeks feel the same.</p>
+<div class="grid">
+<div class="card"><h3>Conversation circles</h3><p>Small groups chat about a new topic each week.</p></div>
+<div class="card"><h3>Debates and discussions</h3><p>Practice sharing opinions and listening to others.</p></div>
+<div class="card"><h3>Games and challenges</h3><p>Word games, storytelling, and quick quizzes.</p></div>
+<div class="card"><h3>Movie and music nights</h3><p>Learn natural English from films and songs.</p></div>
+</div>
+</section>
+
+<section id="schedule">
+<h2>Schedule</h2>
+<p class="lead">Placeholder times. Replace with your real meeting details.</p>
+<div class="tablewrap"><table class="sched">
+<thead><tr><th>Day</th><th>Time</th><th>Session</th><th>Place</th></tr></thead>
+<tbody>
+<tr><td>Wednesday</td><td>3:30 PM</td><td>Conversation circles</td><td>Room 12</td></tr>
+<tr><td>Friday</td><td>3:30 PM</td><td>Games and debates</td><td>Room 12</td></tr>
+<tr><td>Last Saturday</td><td>10:00 AM</td><td>Movie or music night</td><td>Main hall</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="docs">
+<h2>Documentation</h2>
+<p class="lead">Everything new members need to know, in one place.</p>
+<details open><summary>How to join</summary><ul><li>Fill in the form below.</li><li>Come to any session. Your first one is a free trial.</li><li>Meet the team and get added to the member group chat.</li></ul></details>
+<details><summary>Club rules</summary><ul><li>Speak English during sessions, even if it's slow.</li><li>Be respectful. No mocking anyone's accent or mistakes.</li><li>Let everyone have a turn to talk.</li><li>Keep phones away unless the activity needs them.</li></ul></details>
+<details><summary>Member guide</summary><p>New members get a welcome pack with a vocabulary list, the term calendar, and tips for getting the most out of each session. Ask a team member for your copy.</p></details>
+<details><summary>Roles and committee</summary><ul><li>President: leads the club and plans each term.</li><li>Vice president: supports events and new members.</li><li>Secretary: handles announcements and records.</li><li>Activities lead: designs sessions and games.</li></ul></details>
+<details><summary>FAQ</summary><p><strong>Is it free?</strong> Yes, placeholder: update if there are fees.</p><p><strong>Do I need to speak well?</strong> No. We welcome all levels.</p><p><strong>Can I bring a friend?</strong> Absolutely.</p></details>
+</section>
+
+<section id="join">
+<h2>Ready to find your voice?</h2>
+<p class="lead">Take the first step. Join a friendly community where you can practice English, meet people, and grow at your own pace.</p>
+<div class="join-layout">
+  <aside class="join-note">
+    <div>
+      <h3>Your English journey starts here.</h3>
+      <p>You don't need perfect grammar or a big vocabulary. You just need the courage to start talking.</p>
+      <ul class="join-points">
+        <li><span>✓</span><span>Practice in a relaxed, supportive environment.</span></li>
+        <li><span>✓</span><span>Meet fellow students and make new friends.</span></li>
+        <li><span>✓</span><span>Build confidence one conversation at a time.</span></li>
+      </ul>
+    </div>
+    <p><strong>Everyone starts somewhere.</strong><br>We'd love to meet you!</p>
+  </aside>
+
+  <div class="join-form-card">
+    <h3 style="font-size:1.5rem;margin-bottom:8px">Membership interest form</h3>
+    <p class="lead" style="margin-bottom:22px">Fill in your details and the club team can follow up with you.</p>
+    <form id="f">
+      <div class="form-row">
+        <label>Full name
+          <input required name="name" autocomplete="name" placeholder="e.g. Alex Simanjuntak">
+        </label>
+        <label>Student ID <span class="field-hint">If applicable</span>
+          <input name="student_id" autocomplete="off" placeholder="e.g. 11XXXXXXXX">
+        </label>
+      </div>
+      <label>Email address
+        <input required type="email" name="email" autocomplete="email" placeholder="you@example.com">
+      </label>
+      <div class="form-row">
+        <label>English level
+          <select name="level" required>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Not sure">Not sure yet</option>
+          </select>
+        </label>
+        <label>What interests you most?
+          <select name="interest" required>
+            <option value="Conversation practice">Conversation practice</option>
+            <option value="Debates and discussions">Debates and discussions</option>
+            <option value="Games and activities">Games and activities</option>
+            <option value="Making friends">Making friends</option>
+            <option value="Everything">A bit of everything</option>
+          </select>
+        </label>
+      </div>
+      <label>Why would you like to join? <span class="field-hint">Optional</span>
+        <textarea name="motivation" maxlength="500" placeholder="Tell us what you'd like to learn or try..."></textarea>
+      </label>
+      <button class="btn" type="submit">Submit interest ↗</button>
+      <p class="join-disclaimer">Your details are for membership follow-up. This demo form does not send data to a server.</p>
+      <p id="ok" role="status" aria-live="polite">Thanks for your interest! Your form was checked, but this demo hasn't sent your details to the club. Please contact the club team directly to complete registration.</p>
+    </form>
+  </div>
+</div>
+</section>
+<script>
+document.getElementById('f').addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (!this.reportValidity()) return;
+  document.getElementById('ok').style.display = 'block';
+  document.getElementById('ok').scrollIntoView({behavior: 'smooth', block: 'nearest'});
+});
+</script>
+</div>
+<footer><div class="wrap">© 2026 Del English Club. Contact: your-email@example.com</div></footer>
+</body>
+</html>
